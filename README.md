@@ -27,7 +27,7 @@ Contains the files for the website of algorithms. This is repository for the Alg
     - [x] Make a decorative navbar
     - [x] Llink the webpages of the algorithm paradigm  
   
-- [ ] Phase 4 - Ongoing
+- [ ] Phase 4 - Ongoing (Expected : Nov 17th)
   - Write programs to automatically execute the stepwise tasks of the chosen examples
 
   - To Do :
@@ -49,7 +49,7 @@ Contains the files for the website of algorithms. This is repository for the Alg
     - [ ] Color coordination of DOMs 
     - [ ] Add music to each webpage
   
-- [ ] Phase 5 - Not yet started (Deadine : Nov 20th)
+- [ ] Phase 5 - Not yet started (Expected : Nov 24th)
   - Write the report and do the last minute fine tunings 
 
 

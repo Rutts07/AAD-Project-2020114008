@@ -56,8 +56,9 @@ Contains the files for the website of algorithms. This is repository for the Alg
 
 ## Usage Guidelines :
 
-- Clone / download the repository in your local machine. Please do not alter the file structure.
-- Open home.html (after which you will be able to navigate to and from this webpage to others)
+- Clone / download the repository in your local machine. Please do not alter the file structure
+- Tested all the HTML, CSS and JS files in ```Brave``` browser. Disclaimer : May not work in other browsers
+- Open ```home.html``` (after which you will be able to navigate to and from this webpage to others)
 
 
 ### Hope you guys benefit from my website !!!

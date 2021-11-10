@@ -48,6 +48,7 @@ Contains the files for the website of algorithms. This is repository for the Alg
     - [ ] Create webpage for dynamic programming and contact pages
     - [ ] Color coordination of DOMs 
     - [ ] Add music to each webpage
+    - [ ] Add ```Reload``` button to relaod the terminal
   
 - [ ] Phase 5 - Not yet started (Expected : Nov 24th)
   - Write the report and do the last minute fine tunings 

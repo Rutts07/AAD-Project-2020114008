@@ -31,7 +31,7 @@ Contains the files for the website of algorithms. This is repository for the Alg
   - Write programs to automatically execute the stepwise tasks of the chosen examples
 
   - To Do :
-    - Divide and Conquer :
+    - Divide and Conquer Paradigm :
       - [ ] Quick Sort
       - [ ] Merge Sort
      
@@ -39,7 +39,7 @@ Contains the files for the website of algorithms. This is repository for the Alg
       - [x] Selection Sort
       - [ ] Dijkstra's Algorithm
       
-    - Dynamic Prgramming :
+    - Dynamic Programming :
       - [ ] Insertion Sort
       - [ ] Nth Fibonacci Number using DP 
   

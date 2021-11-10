@@ -25,7 +25,7 @@ Contains the files for the website of algorithms. This is repository for the Alg
   
   - Issues :
     - [x] Make a decorative navbar
-    - [x] Llink the webpages of the algorithm paradigm  
+    - [x] Link the webpages of the algorithm paradigms  
   
 - [ ] Phase 4 - Ongoing (Expected : Nov 17th)
   - Write programs to automatically execute the stepwise tasks of the chosen examples

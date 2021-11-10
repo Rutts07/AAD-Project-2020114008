@@ -10,12 +10,12 @@ Contains the files for the website of algorithms. This is repository for the Alg
 
 - [x] Phase 1 - (Completed : Oct 20th)
   - Rephrasing the theory of the algorithm design techniques into simple steps (or sub tasks)
-  - Have chosen divide and conquer, greedy and dynamic programming approaches
+  - I Have chosen divide and conquer, greedy and dynamic programming approaches
  
 - [x] Phase 2 - (Completed : Oct 22nd)
   - Selecting / refining the examples for each paradigm
  
-  - Currently have two examples for each paradigm :
+  - Currently I have two examples for each paradigm :
     - [x] Divide and conquer : Quick sort, Merge sort
     - [x] Greedy strategy : Selection sort, Dijkstra's algorithm
     - [x] Dynamic Programming : Insertion sort, Nth Fibonacci number using DP

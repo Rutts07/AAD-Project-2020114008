@@ -6,7 +6,7 @@ Contains the files for the website of algorithms. This is repository for the Alg
 - In addition to this, bootstrap and sweetalert libraries have also been used ...
 
 
-### Phase-wise Work Division :
+## Phase-wise Work Division :
 
 - [x] Phase 1 - (Completed : Oct 20th)
   - Rephrasing the theory of the algorithm design techniques into simple steps (or sub tasks)
@@ -53,10 +53,10 @@ Contains the files for the website of algorithms. This is repository for the Alg
   - Write the report and do the last minute fine tunings 
 
 
-### Usage Guidelines :
+## Usage Guidelines :
 
 - Clone / download the repository in your local machine. Please do not alter the file structure.
 - Open home.html (after which you will be able to navigate to and from this webpage to others)
 
 
-#### Hope you guys benefit from my website !!!
+## Hope you guys benefit from my website !!!

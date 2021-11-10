@@ -1,17 +1,23 @@
 # AAD-Project-2020114008
 Contains the files for the website of algorithms. This is repository for the Algorithm Analysis and Design Project.
 
+- My idea for this project is to make an interactive website for algorithm paradigms.
 - This website has been created using HTML, external CSS and internal Javascript
 - In addition to this, bootstrap and sweetalert libraries have also been used ...
 
 ### Phase-wise work division :
-- [x] Phase 1 - (Oct 20th)
+
+- [x] Phase 1 - (Completed : Oct 20th)
   - Rephrasing the theory of the algorithm design techniques into simple steps (or sub tasks)
+ 
 - [ ] Phase 2 - Ongoing
   - Selecting / refining the examples for each paradigm
-- [x] Phase 3 - (Nov 1st)
+  
+- [x] Phase 3 - (Completed : Nov 1st)
   - Design the menu-driven to make the website interactive 
+  
 - [ ] Phase 4 - Ongoing
   - Write programs to automatically execute the stepwise tasks of the chosen examples
+  
 - [ ] Phase 5 - Not yet started
   - Write the report and do the last minute fine tunings 

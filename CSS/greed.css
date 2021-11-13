@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+body
+{
+    background-image: url("../img/bg4k4.png"); 
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+header {
+    background-color: transparent;
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+	font-weight: 800;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  padding: 10px 0;
+}
+
+nav{
+    float: center;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 50px;
+  padding-top: 23px;
+
+  position: relative;
+}
+
+nav a {
+  color: #2a3168;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: 
+  #456189;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: 
+  #456189;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+#card1 
+{
+    background-color: transparent;
+}
+
+#logoindent
+{
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+#js1
+{
+    color : #0d1e39;
+    background-color: #b0c7eb; 
+    box-shadow:
+    rgba(22, 31, 39, 0.42) 0px 60px 123px -25px,
+    rgba(19, 26, 32, 0.08) 0px 35px 75px -35px;
+    border-radius: 10px;
+    border: 1px solid;
+    border-color:
+    rgb(213, 220, 226)
+    rgb(213, 220, 226)
+    rgb(184, 194, 204);
+    padding: 20px;
+}
+
+.button-in
+{
+    color:#0f1c30;
+    background-color: #dfeaf9 ;
+    border-color: #b0c7eb;
+    border-radius: 5px;
+}
+
+.button-in:hover
+{
+  color: black;
+  background: #3d75c4;
+}
+
+.txt
+{
+  text-align: center;
+}
+
+.reveal
+{
+  color: #3771c8;
+  background-color: #e1ebfb;
+  border-color: #e1ebfb;
+  border-radius: 5px;
+}
+
+.reveal:hover
+{
+  color:#e1ebfb;
+  background-color: 
+  #3771c8;
+}
+
+#pic
+{
+  height : 35px;
+  width : 35px;
+  float :right;
+
+  overflow: hidden;
+  transition-duration: 0.8s;
+  transition-property: transform;
+}
+
+#pic:hover{
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+}

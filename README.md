@@ -45,10 +45,10 @@ Contains the files for the website of algorithms. This is repository for the Alg
   
   - Issues : 
     - [ ] Make a custom prompt to take input from the user
-    - [ ] Create webpage for dynamic programming and contact pages
-    - [ ] Color coordination of DOMs 
+    - [x] Create webpage for dynamic programming and contact pages
+    - [x] Color coordination of DOMs 
     - [ ] Add music to each webpage
-    - [ ] Add ```Reload``` button to reload the terminal
+    - [x] Add ```Reload``` button to reload the terminal
   
 - [ ] Phase 5 - Not yet started (Expected : Nov 24th)
   - Write the report and do the last minute fine tunings 

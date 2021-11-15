@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap');
+
+body
+{
+    color: #f0e1ba;
+    background-image: url("../img/bg4k1.png"); 
+}
+
+#title
+{
+  color: #f0e1ba;
+  text-decoration: none;
+  font-family: 'Cabin', sans-serif;
+}
+
+#title:hover
+{
+  color :  
+#8c6ca4;
+}
+
+#title img
+{
+  display:none;
+}
+
+#title:hover img 
+{ 
+  display: inline-block;
+  transition: all ease-in-out 250ms;
+}
+
+.inline
+{
+  display: inline-block;
+}
+
+#hide
+{
+  display: none;
+  width: 30px;
+  height: 30px;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+header {
+    background-color: transparent;
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+	  font-weight: 800;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  padding: 10px 0;
+}
+
+nav{
+    float: center;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 50px;
+  padding-top: 23px;
+
+  position: relative;
+}
+
+nav a {
+  color: #f0e1ba;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #13162b;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #13162b;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+#card1 
+{
+    background-color: transparent;
+}
+
+#logoindent
+{
+    margin-top: 10px;
+    margin-left: 40px;
+}

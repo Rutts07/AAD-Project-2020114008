@@ -32,7 +32,7 @@ Contains the files for the website of algorithms. This is repository for the Alg
 
   - To Do :
     - Divide and Conquer Paradigm :
-      - [ ] Quick Sort
+      - [x] Quick Sort
       - [ ] Merge Sort
      
     - Greedy Strategy :  

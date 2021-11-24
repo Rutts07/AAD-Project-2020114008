@@ -41,7 +41,7 @@ Contains the files for the website of algorithms. This is repository for the Alg
       
     - Dynamic Programming :
       - [ ] Insertion Sort
-      - [ ] Nth Fibonacci Number using DP 
+      - [x] Nth Fibonacci Number using DP 
   
   - Issues : 
     - [ ] Make a custom prompt to take input from the user

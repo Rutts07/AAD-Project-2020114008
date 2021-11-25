@@ -40,8 +40,8 @@ Contains the files for the website of algorithms. This is repository for the Alg
       - [ ] Dijkstra's Algorithm
       
     - Dynamic Programming :
-      - [ ] Insertion Sort
-      - [x] Nth Fibonacci Number using DP 
+      - [x] Nth Fibonacci Number using DP
+      - [x] Insertion Sort
   
   - Issues : 
     - [ ] Make a custom prompt to take input from the user

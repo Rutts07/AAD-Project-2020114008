@@ -1,27 +1,27 @@
 <html>
     <head>
-        <title>Greedy Strategy</title>
+        <title>Dynamic Programming</title>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <script src="sweetalert2.min.js"></script>
-        <link rel="stylesheet" href="sweetalert2.min.css">
-        <link href = "CSS/greed.css" rel="stylesheet" type="text/css">
+        <link href = "CSS/dp.css" rel="stylesheet" type="text/css">
     </head>
 
     <body>
         <header>           
             <div class="container">
                 <p class = "button" data-toggle="tooltip" title="Back to Top">
-                    <img id = "logoindent" class = "fixed-top" src = "img/greed-logo2-removebg-preview.png" alt = "logo" height = "60px" width = "60px" onclick="goToTop()">
+                    <img id = "logoindent" class = "fixed-top" src = "img/dplogo-removebg-preview.png" alt = "logo" height = "60px" width = "60px" onclick="goToTop()">
                 </p>
                 
-                <nav>
+                <a class="inline" data-toggle="tooltip" title="This page" id="title" href="dp.html"><h4>Dynamic Programming</h4></a>
+
+                <nav class="inline">
                     <ul>
-                        <li><h4>Greedy Strategy</h4></li>
+                        <li></li>
                         <li></li>
                         <li><a href="home.html" class = "button">Home</a></li>
                         <li><a href="dnc.html" class="button">Divide And Conquer</a></li>
-                        <li><a href="#">Dynamic Programming</a></li>
+                        <li><a href="greed.html">Greedy Strategy</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
@@ -35,10 +35,9 @@
             <div class="col-sm">
                 <div id="card1" class="card mx-auto d-block" style="width:500px">
                     <div class="card-body">
-                        <h4 style="font-family:verdana" class="card-title text-dark">Be greedy to learn new things ...</h4>
+                        <h4 style="font-family:verdana" class="card-title text-dark">What's Dynamic Programming ? ...</h4>
                         <p style="font-family:verdana" class="card-text text-dark">
-                            This algorithm paradigm focusses on local optimality at each step in order to achieve global optimality.
-                            This paradigm always chooses the step which benefits the solution immediately. 
+                            Basically its memoised iteration ...
                         
                             <br>
                             <br>
@@ -46,8 +45,8 @@
                             <p class="txt">Under this paradigm, we will be learning :
                                 <br>
                                 <br>
-                                <button id="reveal1" class="reveal" onclick="reveal1()">Selection Sort</button> &emsp; &emsp;
-                                <button class="reveal">Dijkstra's Algo</button>
+                                <button class="reveal" onclick="reveal1()">Fibonacci Series</button> &emsp; &emsp;
+                                <button class="reveal" onclick="reveal2()">Insertion Sort</button>  
                             </p>
                         
                         </p>
@@ -62,11 +61,21 @@
         <br>
         <br>
         <br>
+
+        <audio loop id="audio" src="bgm/DP-BGM.mp3"></audio>
+
         <div id="js1" style="width:800px; margin:0 auto;" hidden>
-            Let's Learn Selection sort ...
-            &emsp; <button id="button" class="button-in" onclick="PopulateArray()">Populate Array</button>
-            <img id="pic" data-toggle="tooltip" title="Reload Terminal" src="img/reload1-removebg-preview.png" onclick="reloadTerminal()">
-            
+            Let's find the Nth number in the Fibonacci Series ...
+            &emsp; <button id="button" class="button-in" onclick="EnterN()">Initialize N</button>
+            <img class="pic" data-toggle="tooltip" title="Reload Terminal" src="img/reload5-removebg-preview.png" onclick="reloadTerminal1()">
+            <img id="play-pause1" src="img/pause-removebg-preview.png" onclick="toggle1()">
+        </div>
+
+        <div id="js2" style="width:800px; margin:0 auto;" hidden>
+            Let's learn Insertion Sort ...
+            &emsp; <button id="button" class="button-out" onclick="PopulateArray()">Populate Array</button>
+            <img class="pic" data-toggle="tooltip" title="Reload Terminal" src="img/reload5-removebg-preview.png" onclick="reloadTerminal2()">
+            <img id="play-pause2" src="img/pause-removebg-preview.png" onclick="toggle2()">
         </div>
 
         <br>
@@ -75,113 +84,126 @@
     </body>
 
     <script>
-        let arr = [];
-        let i = -1;
-        let loop = 0;
-
-        function reloadTerminal()
-        {
-            document.getElementById("js1").innerHTML =
-            "Let's Learn Selection sort ... &emsp; <button id='button' class='button-in' onclick='PopulateArray()'>Populate Array</button> <img id='pic' data-toggle='tooltip' title='Reload Terminal' src='img/reload1-removebg-preview.png' onclick='reloadTerminal()'>"
-        
-            arr = [];
-            i = -1;
-            loop = 0;
-        }
+        /* General Code */
 
         function goToTop()
         {
             document.body.scrollTop = 0;
         }
 
+        function getArrayElements(array)
+        {
+            let text = "";
+            for(var k = 0; k < array.length; k++)
+                text += array[k] + " ";
+
+            return text;
+        }
+
+        function audioStartOver()
+        {
+            var audio = document.getElementById("audio");
+            audio.currentTime = 0;
+            audio.play();
+        }
+
+        /* Codes for Nth Fibonacci number */
+
+        let arr1 = [0, 1];
+        let N1 = 0;
+        let i = 1;
+        let loop1 = 0; 
+
+        function toggle1()
+        {
+            var audio = document.getElementById("audio");
+            var img = document.getElementById("play-pause1");
+
+            if(audio.paused)
+            {
+                audio.play();
+                img.src = "img/pause-removebg-preview.png"; 
+            }
+
+            else
+            {
+                audio.pause();
+                img.src = "img/play-removebg-preview.png";
+            }
+        }
+
         function reveal1()
         {
             if (document.getElementById('js1').hidden == true)
+            {
                 document.getElementById('js1').hidden = false;
+                document.getElementById('js2').hidden = true;
+                
+                audioStartOver();
+
+                var img = document.getElementById("play-pause1");
+                img.src = "img/pause-removebg-preview.png";
+
+                window.scrollTo(0,document.body.scrollHeight);
+            }
+                
             
             else
             {
                 var obj = document.getElementById('js1');
                 obj.hidden = true;
+                
+                var audio = document.getElementById("audio");
+                audio.pause(); 
             }
         }
 
-        function PopulateArray()
+        function reloadTerminal1()
         {
-            document.getElementById("js1").innerHTML = 
-            "Let's Learn Selection sort ... &emsp; <button id='button' class='button-in' onclick='PopulateArray()'>Populate Array</button> <img id='pic' data-toggle='tooltip' title='Reload Terminal' src='img/reload1-removebg-preview.png' onclick='reloadTerminal()'>"
+            audioStartOver();
             
-            arr = [];
-            let size = prompt("Enter the size of the array (1 - 9)");
+            document.getElementById("js1").innerHTML =
+            "Let's find the Nth number in the Fibonacci Series ... &emsp; <button id='button' class='button-in' onclick='EnterN()'>Initialize N</button> <img class='pic' data-toggle='tooltip' title='Reload Terminal' src='img/reload5-removebg-preview.png' onclick='reloadTerminal1()'> <img id='play-pause1' src='img/pause-removebg-preview.png' onclick='toggle1()'>";
+            
+            arr1 = [0, 1];
+            N1 = 0;
+            i = 1;
+            loop1 = 0;
+        }       
 
-            if ((size >= 1) && (size <= 9))
+        function EnterN()
+        {
+            N1 = prompt("Enter N (3 - 10)");
+            
+            if ((N1 >= 3) && (N1 <= 10))
             {
-                for(var m = 0; m < size; m++) 
-                {
-                    arr[m] = parseInt(prompt("Enter an integer for Element " + (m+1)));
-
-                    if(isNaN(arr[m]))
-                    {
-                        alert('Enter a number !!!');
-                        m--;
-                    }
-                }
-	                
-
                 document.getElementById("js1").innerHTML += 
-                "<br><br>Your Input :  " + getArrayElements(arr) + "&emsp;&emsp; <button id='button' class='button-in' onclick='start()'>Start ???</button>";
-        
+                "<br><br>Your Input :  " + N1 + "&emsp;&emsp; <button id='button' class='button-in' onclick='start1()'>Start ???</button>";
+
                 window.scrollTo(0,document.body.scrollHeight);
             } 
             
             else
             {
                 alert('Enter a valid size !!!');
-                PopulateArray();
+                Enter_N();
             }
-            
         }       
 
-        function getArrayElements(array) 
+        function iterationFibonacciSeries(array)
         {
-            let text = "";
-            for(var k = 0; k < arr.length; k++)
-                text += arr[k] + " ";
-
-            return text;
+            let size = array.length;
+            array[size] = array[size-1] + array[size-2];
         }
 
-        function iterationSelectionSort(array, z)
-        {
-            if (z < array.length - 1)
-            {
-                let min_index = z;
-                for (var x = (z + 1); x < array.length; x++)
-                {
-                    if (array[x] < array[min_index])
-                        min_index = x;
-                }
-
-                let tmp = array[z];
-                array[z] = array[min_index];
-                array[min_index] = tmp; 
-
-                document.getElementById("js1").innerHTML +=
-                "<br>&emsp;Least element in the sub-array from index " + (z+1) + " to " + array.length + " : " + array[z];
-
-                document.getElementById("js1").innerHTML +=
-                "<br>&emsp;Swapped " + tmp + " and " + array[z];
-            }
-        }
-
-        function hideButton()
+        function hideButton1()
         {
             var buttons = document.getElementsByClassName('button-in');
 
             for(var m = 0; m < buttons.length; m++)
             {
                 buttons[m].hidden = true;
-            }
+            }         
 
             incrementI();
         }
@@ -190,52 +212,241 @@
         {
             i = i + 1;
 
-            if(i < arr.length && loop != 1)
+            if((i < N1) && (loop1 == 0))
             {
                 document.getElementById("js1").innerHTML +=
-                "<br><br>Iteration " + (i + 1) + ": ";
+                "<br><br> Iteration " + (i-1) + " : ";
 
                 document.getElementById("js1").innerHTML +=
-                "<br>&emsp;Input  : " + getArrayElements(arr);
+                "<br>&emsp;Input  : " + getArrayElements(arr1);
 
-                iterationSelectionSort(arr, i);    
+                iterationFibonacciSeries(arr1);    
                 
                 document.getElementById("js1").innerHTML +=
-                "<br>&emsp;Output : " + getArrayElements(arr);
+                "<br>&emsp;Output : " + getArrayElements(arr1);
 
                 window.scrollTo(0,document.body.scrollHeight);
 
                 document.getElementById("js1").innerHTML +=
-                    "&emsp;&emsp;<button id = 'close' class='button-in' onclick='hideButton()'>Next Iteration</button>";
+                "&emsp;&emsp;<button id = 'close' class='button-in' onclick='hideButton1()'>Next number</button>";
             }
 
             else
             {
+                if(N1 == 3)
+                {
+                    document.getElementById("js1").innerHTML +=
+                    "<br><br>The 3rd number in the Fibonacci Series : " + arr1[N1-1];
+                }
+
+                else
+                {
+                    document.getElementById("js1").innerHTML +=
+                    "<br><br>The " + N1 + "th number in the Fibonacci Series : " + arr1[N1-1];
+                }
+
                 document.getElementById("js1").innerHTML +=
-                "<br><br>Sorted !";
-                    
+                "<br><br>Done !";
+
+                toggle1();
+
                 window.scrollTo(0,document.body.scrollHeight);
 
-                loop = 1;
+                loop1 = 1;
             }
         }
 
-        function start()
+        function start1()
         { 
             var buttons = document.getElementsByClassName("button-in");
+            for(var m = 0; m < buttons.length; m++)
+            {
+                buttons[m].hidden = true;
+            }
 
+            document.getElementById("js1").innerHTML += 
+            "<br><br> f(n) = f(n-1) + f(n-2) <br> Instead of computing f(n) every time, we are going to store these values in an array ..."
+            
+            document.getElementById("js1").innerHTML +=
+            "&emsp;<button id='close' class='button-in' onclick='hideButton1()'>Next Number</button>";
+
+            window.scrollTo(0,document.body.scrollHeight);
+        }  
+        
+        
+        /* Codes for Insertion Sort*/
+
+        let arr2 = [];
+        let N2;
+        let j = 0;
+        let loop2 = 0;
+
+        function toggle2()
+        {
+            var audio = document.getElementById("audio");
+            var img = document.getElementById("play-pause2");
+
+            if(audio.paused)
+            {
+                audio.play();
+                img.src = "img/pause-removebg-preview.png"; 
+            }
+
+            else
+            {
+                audio.pause();
+                img.src = "img/play-removebg-preview.png";
+            }
+        }
+
+        function reveal2()
+        {
+            if (document.getElementById('js2').hidden == true)
+            {
+                document.getElementById('js2').hidden = false;
+                document.getElementById('js1').hidden = true;
+
+                audioStartOver();
+
+                var img = document.getElementById("play-pause2");
+                img.src = "img/pause-removebg-preview.png";
+
+                window.scrollTo(0,document.body.scrollHeight);
+            }
+                
+            else
+            {
+                var obj = document.getElementById('js2');
+                obj.hidden = true;
+
+                var audio = document.getElementById("audio");
+                audio.pause(); 
+            }
+        }
+
+        function reloadTerminal2()
+        {
+            audioStartOver();
+
+            document.getElementById("js2").innerHTML =
+            "Let's learn Insertion Sort ... &emsp; <button id='button' class='button-out' onclick='PopulateArray()'>Populate Array</button><img class='pic' data-toggle='tooltip' title='Reload Terminal' src='img/reload5-removebg-preview.png' onclick='reloadTerminal2()'> <img id='play-pause2' src='img/pause-removebg-preview.png' onclick='toggle2()'>";
+        
+            arr2 = [0, 1];
+            N2 = 0;
+            j = 0;
+            loop2 = 0;
+        }
+
+        function hideButton2()
+        {
+            var buttons = document.getElementsByClassName('button-out');
+
+            for(var m = 0; m < buttons.length; m++)
+            {
+                buttons[m].hidden = true;
+            }         
+
+            incrementJ();
+        }
+
+        function iterationInsertionSort(array, z)
+        {
+            let key = array[z];
+            let k = z - 1;
+
+            while((k >= 0) && (array[k] > key))
+            {
+                array[k + 1] = array[k];
+                k = k - 1;
+            }
+
+            array[k + 1] = key;
+        }
+
+        function incrementJ()
+        {
+            j = j + 1;
+
+            if((j < N2) && (loop2 == 0))
+            {
+                document.getElementById("js2").innerHTML +=
+                "<br><br>Iteration " + j + " : ";
+
+                document.getElementById("js2").innerHTML +=
+                "<br>&emsp;Input  : " + getArrayElements(arr2);
+
+                iterationInsertionSort(arr2, j);    
+                
+                document.getElementById("js2").innerHTML +=
+                "<br>&emsp;Output : " + getArrayElements(arr2);
+
+                window.scrollTo(0,document.body.scrollHeight);
+
+                document.getElementById("js2").innerHTML +=
+                "&emsp;&emsp;<button id = 'close' class='button-out' onclick='hideButton2()'>Next Iteration</button>";
+            }
+
+            else
+            {
+                document.getElementById("js2").innerHTML +=
+                "<br><br>Sorted !";
+
+                toggle2();
+                    
+                window.scrollTo(0,document.body.scrollHeight);
+
+                loop2 = 1;
+            }
+        }
+
+        function PopulateArray()
+        {
+            arr2 = [];
+            N2 = prompt("Enter the size of the array (1 - 9)");
+
+            if ((N2 >= 1) && (N2 <= 9))
+            {
+                for(var m = 0; m < N2; m++) 
+                {
+                    arr2[m] = parseInt(prompt("Enter an integer for Element " + (m+1)));
+
+                    if(isNaN(arr2[m]))
+                    {
+                        alert('Enter a number !!!');
+                        m--;
+                    }
+                }
+            	                
+                document.getElementById("js2").innerHTML += 
+                "<br><br>Your Input :  " + getArrayElements(arr2) + "&emsp;&emsp; <button id='button' class='button-out' onclick='start2()'>Start ???</button>";
+        
+                window.scrollTo(0,document.body.scrollHeight);
+            }
+
+            else
+            {
+                alert('Enter a valid size !!!');
+                reloadTerminal2();
+            }
+            
+        }
+
+        function start2()
+        {
+            var buttons = document.getElementsByClassName("button-out");
             for(var m = 0; m < buttons.length; m++)
             {
                 buttons[m].hidden = true;
             }
                       
-            document.getElementById("js1").innerHTML += 
+            document.getElementById("js2").innerHTML += 
             "<br><br> Let's sort this array now ... &emsp;"
             
-            document.getElementById("js1").innerHTML +=
-            "<button id='close' class='button-in' onclick='hideButton()'>Next Iteration</button>";
+            document.getElementById("js2").innerHTML +=
+            "<button id='close' class='button-out' onclick='hideButton2()'>Next Iteration</button>";
         
-            window.scrollTo(0,document.body.scrollHeight);
-        }     
+            window.scrollTo(0,document.body.scrollHeight);  
+        }
+
     </script>
 </html>

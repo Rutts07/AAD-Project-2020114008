@@ -42,17 +42,17 @@ Contains the files for the website of algorithms. This is repository for the Alg
     - Dynamic Programming :
       - [x] Nth Fibonacci Number using DP
       - [x] Insertion Sort
-  
-  - Issues : 
-    - [ ] Make a custom prompt to take input from the user
-    - [x] Create webpage for dynamic programming and contact pages
-    - [x] Color coordination of DOMs 
-    - [x] Add music to each webpage
-    - [x] Add ```Reload``` button to reload the terminal
-  
+   
 - [ ] Phase 5 - Not yet started (Expected : Nov 24th)
   - Write the report and do the last minute fine tunings 
-  - Create ```How to use the website``` pdf
+
+- Issues : 
+  - [ ] Make a custom prompt to take input from the user [NA]
+  - [x] Create webpage for dynamic programming and contact pages
+  - [x] Color coordination of DOMs 
+  - [x] Add music to each webpage
+  - [x] Add ```Reload``` button to reload the terminal
+  - [ ] Create ```How to use the website``` pdf
 
 ## Usage Guidelines :
 

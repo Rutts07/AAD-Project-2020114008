@@ -52,7 +52,7 @@ Contains the files for the website of algorithms. This is repository for the Alg
   
 - [ ] Phase 5 - Not yet started (Expected : Nov 24th)
   - Write the report and do the last minute fine tunings 
-
+  - Create ```How to use the website``` pdf
 
 ## Usage Guidelines :
 

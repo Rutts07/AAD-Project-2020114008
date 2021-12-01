@@ -44,16 +44,9 @@ Contains the files for the website of algorithms. This is repository for the Alg
 - [x] Phase 5 - (Completed :Dec 1st)
   - Write the report
 
-- Issues : 
-  - [x] Create webpage for dynamic programming and contact pages
-  - [x] Color coordination of DOMs 
-  - [x] Add music to each webpage
-  - [x] Add ```Reload``` button to reload the terminal
-  - [x] Create ```How to use the website``` pdf
-
 ## Usage Guidelines :
 
-- Clone / download the repository in your local machine. Please do not alter the file structure. (P.S :) You can ditch README.md and Report/)
+- Clone this repository in your local machine. Please do not alter the file structure. (P.S :) You can ditch README.md and Report/)
 - Tested all the HTML, CSS and JS files in ```Brave``` browser. Disclaimer : May not work in other browsers
 - Open ```home.html``` (after which you will be able to navigate to and from this webpage to others)
 

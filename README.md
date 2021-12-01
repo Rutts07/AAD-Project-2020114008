@@ -1,10 +1,12 @@
 # AAD-Project-2020114008
-Contains the files for the website of algorithms. This is repository for the Algorithm Analysis and Design Project.
+Contains the files for the website of algorithms. This is a repository for the Algorithm Analysis and Design Project.
 
 - My idea for this project is to make an interactive website for algorithm paradigms
 - This website has been created using HTML, external CSS and internal Javascript
 - In addition to this, bootstrap and sweetalert libraries have also been used ...
 
+## Acknowledgement :
+I take this opportunity to thank my professor Dr. Kannan Srinathan and the course TAs for giving me a chance to work on algorithms
 
 ## Phase-wise Work Division :
 

@@ -16,8 +16,7 @@ body
 
 #title:hover
 {
-  color :  
-#8c6ca4;
+  color : #8c6ca4;
 }
 
 #title img
@@ -121,4 +120,8 @@ nav a:hover::before {
 {
     margin-top: 10px;
     margin-left: 40px;
+}
+
+p {
+  color: #f0e1ba;
 }

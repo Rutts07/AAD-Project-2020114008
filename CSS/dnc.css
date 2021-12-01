@@ -114,6 +114,32 @@ nav a:hover::before {
     padding: 20px;
 }
 
+.txt
+{
+  text-align: center;
+}
+
+.txtl
+{
+  text-align: left;
+}
+
+.reveal
+{
+  color: #14493d;
+  background-color: #c9e790;
+  border-color: #c9e790;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.reveal:hover
+{
+  color:#c9e790; 
+  background-color: 
+  #14493d;
+}
+
 .button-in
 {
     color:
@@ -131,7 +157,7 @@ nav a:hover::before {
   #478360;
 }
 
-#pic
+.pic
 {
   height : 25px;
   width : 25px;
@@ -142,7 +168,15 @@ nav a:hover::before {
   transition-property: transform;
 }
 
-#pic:hover{
+.pic:hover{
   transform: rotate(360deg);
   -webkit-transform: rotate(360deg);
+}
+
+#play-pause
+{
+  height : 30px;
+  width : 30px;
+  float : right;
+  margin-right: 10px;
 }

@@ -105,7 +105,7 @@ nav a:hover::before {
     margin-left: 40px;
 }
 
-#js1
+#js
 {
     color : #0d1e39;
     background-color: #b0c7eb; 
@@ -155,7 +155,7 @@ nav a:hover::before {
   #3771c8;
 }
 
-#pic
+.pic
 {
   height : 35px;
   width : 35px;
@@ -166,7 +166,15 @@ nav a:hover::before {
   transition-property: transform;
 }
 
-#pic:hover{
+.pic:hover{
   transform: rotate(360deg);
   -webkit-transform: rotate(360deg);
+}
+
+#play-pause
+{
+  height : 35px;
+  width : 35px;
+  float : right;
+  margin-right: 5px;
 }

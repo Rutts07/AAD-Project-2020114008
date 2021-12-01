@@ -15,7 +15,7 @@ Contains the files for the website of algorithms. This is repository for the Alg
 - [x] Phase 2 - (Completed : Oct 22nd)
   - Selecting / refining the examples for each paradigm
  
-  - Currently I have two examples for each paradigm :
+  - Currently I have the following examples for each paradigm :
     - [x] Divide and conquer : Merge sort
     - [x] Greedy strategy : Selection sort
     - [x] Dynamic Programming : Nth Fibonacci number using DP, Insertion sort

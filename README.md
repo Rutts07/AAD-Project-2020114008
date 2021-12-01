@@ -16,9 +16,9 @@ Contains the files for the website of algorithms. This is repository for the Alg
   - Selecting / refining the examples for each paradigm
  
   - Currently I have two examples for each paradigm :
-    - [x] Divide and conquer : Quick sort, Merge sort
-    - [x] Greedy strategy : Selection sort, Dijkstra's algorithm
-    - [x] Dynamic Programming : Insertion sort, Nth Fibonacci number using DP
+    - [x] Divide and conquer : Merge sort
+    - [x] Greedy strategy : Selection sort
+    - [x] Dynamic Programming : Nth Fibonacci number using DP, Insertion sort
   
 - [x] Phase 3 - (Completed : Nov 1st)
   - Design the menu-driven to make the website interactive 
@@ -27,32 +27,29 @@ Contains the files for the website of algorithms. This is repository for the Alg
     - [x] Make a decorative navbar
     - [x] Link the webpages of the algorithm paradigms  
   
-- [ ] Phase 4 - Ongoing (Expected : Nov 17th)
+- [x] Phase 4 - Ongoing (Completed : Nov 25th)
   - Write programs to automatically execute the stepwise tasks of the chosen examples
 
   - To Do :
     - Divide and Conquer Paradigm :
-      - [x] Quick Sort
-      - [ ] Merge Sort
+      - [x] Merge Sort
      
     - Greedy Strategy :  
       - [x] Selection Sort
-      - [ ] Dijkstra's Algorithm
       
     - Dynamic Programming :
       - [x] Nth Fibonacci Number using DP
       - [x] Insertion Sort
    
-- [ ] Phase 5 - Not yet started (Expected : Nov 24th)
-  - Write the report and do the last minute fine tunings 
+- [x] Phase 5 - (Completed :Dec 1st)
+  - Write the report
 
 - Issues : 
-  - [ ] Make a custom prompt to take input from the user [NA]
   - [x] Create webpage for dynamic programming and contact pages
   - [x] Color coordination of DOMs 
   - [x] Add music to each webpage
   - [x] Add ```Reload``` button to reload the terminal
-  - [ ] Create ```How to use the website``` pdf
+  - [x] Create ```How to use the website``` pdf
 
 ## Usage Guidelines :
 

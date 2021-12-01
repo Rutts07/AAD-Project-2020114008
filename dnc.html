@@ -41,6 +41,27 @@
                         <p style="font-family:verdana" class="card-text text-dark">
                             This is a strategy where we divide the problem into smaller sub-problems. By solving the smaller sub-problems, we obtain the solution for the main problem.
                             This strategy was said to be used by the great Napolean himself ...
+                            <br>
+                            <br>
+
+                            <p class="txt">Under this paradigm, we will be learning Merge Sort :
+                                <br>
+                                <p class="txtl">The algorithm goes like this ...</p>
+                                <ul>
+                                    <li>We partition the input array into two halves and keep on partitioning until the array is indivisible (length <= 2)</li>
+                                    <li>We then sort these partitions separately and merge them pairwise.</li>
+                                    <li>Finally, we get the sorted array.</li>
+                                </ul>
+
+                                <br>
+
+                                <p class="txt">Click the button below to see how merge sort works ...
+                                    <br>
+                                    <br>
+                                    <button class="reveal" onclick="reveal()">Merge Sort</button>
+                                </p>
+
+                            </p>
                         </p>
                     </div>
                 </div>
@@ -49,10 +70,14 @@
         <br>
         <br>
         <br>
-        <div id="js" style="width:800px; margin:0 auto;">
+        
+        <audio loop id="audio" src="bgm/DNC-BGM.mp3"></audio>
+
+        <div id="js" style="width:800px; margin:0 auto;" hidden>
             Let's Learn Merge sort ...
             &emsp; <button id="button" class="button-in" onclick="PopulateArray()">Populate Array</button>
-            <img id="pic" data-toggle="tooltip" title="Reload Terminal" src="img/reload2-removebg-preview.png" onclick="reloadTerminal()">
+            <img class="pic" data-toggle="tooltip" title="Reload Terminal" src="img/reload2-removebg-preview.png" onclick="reloadTerminal()">
+            <img id="play-pause" src="img/pauseg.png" onclick="toggle()">
         </div>
 
         <br>
@@ -77,19 +102,69 @@
 
         function reloadTerminal()
         {
+            audioStartOver();
+
             document.getElementById("js").innerHTML =
-            "Let's Learn Merge sort ... &emsp; <button id='button' class='button-in' onclick='PopulateArray()'>Populate Array</button> <img id='pic' data-toggle='tooltip' title='Reload Terminal' src='img/reload2-removebg-preview.png' onclick='reloadTerminal()'>"
+            "Let's Learn Merge sort ... &emsp; <button id='button' class='button-in' onclick='PopulateArray()'>Populate Array</button> <img class='pic' data-toggle='tooltip' title='Reload Terminal' src='img/reload2-removebg-preview.png' onclick='reloadTerminal()'> <img id='play-pause' src='img/pauseg.png' onclick='toggle()'>"
         
             arr = [];
             curr_size = 1;
             n = 1;
         }
 
-        function PopulateArray()
+        function reveal()
         {
-            document.getElementById("js").innerHTML = 
-            "Let's Learn Merge sort ... &emsp; <button id='button' class='button-in' onclick='PopulateArray()'>Populate Array</button> <img id='pic' data-toggle='tooltip' title='Reload Terminal' src='img/reload2-removebg-preview.png' onclick='reloadTerminal()'>"
+            if (document.getElementById('js').hidden == true)
+            {
+                document.getElementById('js').hidden = false;
+
+                audioStartOver();
+
+                var img = document.getElementById("play-pause");
+                img.src = "img/pauseg.png";
+
+                window.scrollTo(0,document.body.scrollHeight);
+            }
+                
             
+            else
+            {
+                var obj = document.getElementById('js');
+                obj.hidden = true;
+
+                var audio = document.getElementById("audio");
+                audio.pause(); 
+            }
+        }
+
+        function audioStartOver()
+        {
+            var audio = document.getElementById("audio");
+            audio.volume = 0.2;
+            audio.currentTime = 0;
+            audio.play();
+        }
+
+        function toggle()
+        {
+            var audio = document.getElementById("audio");
+            var img = document.getElementById("play-pause");
+
+            if(audio.paused)
+            {
+                audio.play();
+                img.src = "img/pauseg.png"; 
+            }
+
+            else
+            {
+                audio.pause();
+                img.src = "img/playg-removebg-preview.png";
+            }
+        }
+
+        function PopulateArray()
+        {          
             arr = [];
             let size = prompt("Enter the size of the array (1 - 9)");
 
@@ -116,7 +191,7 @@
             else
             {
                 alert('Enter a valid size !!!');
-                PopulateArray();
+                reloadTerminal();
             }
         }  
 
@@ -166,6 +241,8 @@
             else
             {
                 document.getElementById("js").innerHTML += "<br><br>Sorted !";
+
+                toggle();
 
                 window.scrollTo(0,document.body.scrollHeight);
             }

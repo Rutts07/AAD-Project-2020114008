@@ -33,7 +33,7 @@
 
         <div class="row justify-content: space-evenly">
             <div class="col-sm">
-                <div id="card1" class="card mx-auto d-block" style="width:500px">
+                <div id="card1" class="card mx-auto d-block" style="width:900px">
                     <div class="card-body">
                         <h4 style="font-family:verdana" class="card-title text-dark">What's Dynamic Programming ? ...</h4>
                         <p style="font-family:verdana" class="card-text text-dark">
@@ -43,10 +43,35 @@
                             <br>
 
                             <p class="txt">Under this paradigm, we will be learning :
-                                <br>
-                                <br>
-                                <button class="reveal" onclick="reveal1()">Fibonacci Series</button> &emsp; &emsp;
-                                <button class="reveal" onclick="reveal2()">Insertion Sort</button>  
+                                <div class="inline-block">
+                                    <div id="card2" class="col-sm">
+                                      <p class="txt"><br>Fibonacci Series</p>
+                                      <ul>
+                                          <li>By normal recursion : we know that f(n) = f(n-1) + f(n-2). To calculate f(n-1) and f(n-2) we follow the same procedure separately. We finally end up calculating many redundant values of lesser fibonacci numbers.</li>
+                                          <li>With the help of Dynamic programming, we just find the fibonacci number only once and use it for further calculations.</li>
+                                      </ul>
+                                      <p class="txt" style="margin-left: 2px; margin-right: 2px;">Click the button below to see how dynamic programming is used to deal with this problem ...
+                                        <br>
+                                        <br>
+                                        <button class="reveal" onclick="reveal1()">Fibonacci Series</button>
+                                    </p>
+                                    </div>
+                                    <div id="card3" class="col-sm">
+                                      <p class="txt"><br>Insertion Sort
+                                        <ul>
+                                            <li>We iterate from arr[1] to arr[n] over the array.</li>
+                                            <li>Compare the current element (key = arr[i]) to its predecessor.</li>
+                                            <li>If the key element is smaller than its predecessor, compare it to the elements before. Move the greater elements one position up to make space for the swapped element.</li>
+                                            <li>By this way, we get the sorted array finally.</li>
+                                        </ul>
+                                      </p>
+                                      <p class="txt">Click the button below to see how selection sort works ...
+                                        <br>
+                                        <br>
+                                        <button class="reveal" onclick="reveal2()">Insertion Sort</button>
+                                      </p>
+                                    </div>
+                                </div>
                             </p>
                         
                         </p>
@@ -103,6 +128,7 @@
         function audioStartOver()
         {
             var audio = document.getElementById("audio");
+            audio.volume = 0.09;
             audio.currentTime = 0;
             audio.play();
         }

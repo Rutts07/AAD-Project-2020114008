@@ -23,10 +23,6 @@ Contains the files for the website of algorithms. This is repository for the Alg
 - [x] Phase 3 - (Completed : Nov 1st)
   - Design the menu-driven to make the website interactive 
   
-  - Issues :
-    - [x] Make a decorative navbar
-    - [x] Link the webpages of the algorithm paradigms  
-  
 - [x] Phase 4 - (Completed : Nov 25th)
   - Write programs to automatically execute the stepwise tasks of the chosen examples
 
@@ -41,8 +37,8 @@ Contains the files for the website of algorithms. This is repository for the Alg
       - [x] Nth Fibonacci Number using DP
       - [x] Insertion Sort
    
-- [x] Phase 5 - (Completed :Dec 1st)
-  - Write the report
+- [x] Phase 5 - (Completed : Dec 1st)
+  - Writing the report
 
 ## Usage Guidelines :
 

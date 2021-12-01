@@ -10,7 +10,7 @@ Contains the files for the website of algorithms. This is repository for the Alg
 
 - [x] Phase 1 - (Completed : Oct 20th)
   - Rephrasing the theory of the algorithm design techniques into simple steps (or sub tasks)
-  - I Have chosen divide and conquer, greedy and dynamic programming approaches
+  - I have chosen divide and conquer, greedy and dynamic programming approaches
  
 - [x] Phase 2 - (Completed : Oct 22nd)
   - Selecting / refining the examples for each paradigm

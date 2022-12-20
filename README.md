@@ -48,5 +48,6 @@ I take this opportunity to thank my professor Dr. Kannan Srinathan and the cours
 - Tested all the HTML, CSS and JS files in ```Brave``` browser. Disclaimer : May not work in other browsers
 - Open ```home.html``` (after which you will be able to navigate to and from this webpage to others)
 
+- Alternatively, you could also view the website from here <https://rutts07.github.io/AAD-Project-2020114008/>
 
 ### Hope you guys benefit from my website !!!
